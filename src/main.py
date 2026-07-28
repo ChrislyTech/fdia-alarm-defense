@@ -27,7 +27,7 @@ import re
 import config as opt
 from dataset import dataset
 from model import AE
-from afunction import BICcom, FDR, FAR
+from utils import BICcom, FDR, FAR
 from exp_harness import ChatteringConfig, run_vacf_fault_free_experiment
 
 

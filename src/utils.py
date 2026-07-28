@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#afunction.py
+#utils.py
 
 import numpy as np
 
