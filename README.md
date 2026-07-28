@@ -139,6 +139,27 @@ The FDIA scheme successfully elevates the FAR across all 21 TEP fault scenarios 
 
 *(See `figs/` for full experimental figures)*
 
+### Figures
+
+| | |
+|---|---|
+| ![SPE monitoring statistics under normal conditions vs. FDIA attack](figs/acf_spe_alarm.png) | ![FAR lift across 21 TEP fault scenarios under the proposed FDIA scheme](figs/far_lift_bar.png) |
+| *SPE monitoring statistics under normal conditions vs. FDIA attack* | *FAR lift across 21 TEP fault scenarios under the proposed FDIA scheme* |
+
+![FAR comparison: baseline vs. under attack vs. after countermeasure](figs/expC_defended_far_B.png)
+*FAR comparison: baseline vs. under attack vs. after countermeasure*
+
+### Summary Results
+
+| Metric | Value |
+|---|---|
+| Fault scenarios tested | 21 (IDV1–IDV21) |
+| Average FAR lift under attack | ~10 percentage points |
+| FAR target range evaluated | 3%, 10%, 20%, 25%, 30%, 40%, 50% |
+| Countermeasure FAR recovery | Returns to near-baseline |
+| Attack type | Chattering alarm (temporal-spatial dual trigger) |
+| Detector type | DAE-PCA (SPE statistic) |
+
 ---
 
 ## 🔗 Related Work & Dependencies
@@ -146,6 +167,18 @@ The FDIA scheme successfully elevates the FAR across all 21 TEP fault scenarios 
 - **TEP Dataset**: Downs & Vogel (1993) — available on [Kaggle](https://www.kaggle.com/datasets/averkij/tennessee-eastman-process-simulation-dataset)
 - **DAE-PCA Baseline**: Ren et al. (2024), *Journal of Industrial Information Integration*
 - **Alarm Management Standards**: ISA-18.2 (2009), EEMUA 191 (2024)
+
+---
+
+## 🔮 Roadmap / Future Work
+
+- [x] FDIA threat model on DAE-PCA detectors (this work)
+- [x] Chattering alarm attack with FAR control
+- [x] Delay-timer and threshold adaptation countermeasures
+- [ ] Extension to KPCA-based detectors
+- [ ] DRL-based adaptive attack generation (Chapter 3, in progress)
+- [ ] Real-time deployment on edge industrial hardware
+- [ ] Generalization to multi-sensor networked CPS
 
 ---
 
